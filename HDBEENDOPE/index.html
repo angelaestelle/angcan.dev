@@ -36,28 +36,29 @@
           <div id="cover-art"></div>
 
           <!-- AUDIO CONTROLS -->
+          <div>
+            <audio controls id="music">
+              <source
+                src=""
+                type="audio/mpeg"
+                id="audioSrc"
+              />
+              Your browser does not support the audio element.
+            </audio>
 
-          <audio controls id="music">
-            <source
-              src="https://discoveryprovider3.audius.co/v1/tracks/m7VmA/stream"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-
-          <button onclick="lastSong()" type="button">
-            <i class="fa fa-step-backward"></i>
-          </button>
-          <button onclick="play()" type="button" id="play">
-            <i class="fa fa-play"></i>
-          </button>
-          <button onclick="stop()" type="button">
-            <i class="fa fa-stop"></i>
-          </button>
-          <button onclick="nextSong()" type="button">
-            <i class="fa fa-step-forward"></i>
-          </button>
-
+            <button type="button" id="previous">
+              <i class="fa fa-step-backward"></i>
+            </button>
+            <button type="button" id="playpause">
+              <i class="fa fa-play"></i>
+            </button>
+            <button type="button" id="stop">
+              <i class="fa fa-stop"></i>
+            </button>
+            <button type="button" id="next">
+              <i class="fa fa-step-forward"></i>
+            </button>
+          </div>
           <script>
             var myMusic = document.getElementById("music");
             function play() {
@@ -127,6 +128,9 @@
       </div>
     </div>
 
-    <script src="js/main.js" async defer></script>
+    <script src="js/music-player.js" async defer></script>
+    <script src="js/twitch.js" async defer></script>
+    <script src="js/clock.js" async defer></script>
+
   </body>
 </html>
