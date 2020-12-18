@@ -5,6 +5,7 @@
 //Create a Twitch.Embed object that 
 //will render within the "twitch-embed" root element.
 
+const embed = document.getElementById('twitch-embed')
 
 new Twitch.Embed("twitch-embed", {
   width: 854,
@@ -13,8 +14,6 @@ new Twitch.Embed("twitch-embed", {
   allowfullscreen: true,
   autoplay: true,
   layout: 'video-with-chat',
-  video: '826825321'
-
 });
 
 embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
