@@ -4,7 +4,7 @@
 }
 
 body {
-  background: src("images/Desktop_wallpaper_HD.png")
+  background-image: url("images/Desktop_wallpaper_HD.png")
   margin: 0;
 }
 
