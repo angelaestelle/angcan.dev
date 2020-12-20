@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
+    <div class="bg">
+
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -22,52 +24,53 @@
 
     <!--CONTENT WRAPPER START-->
     <div class="content">
-      <!--MUSIC PLAYER-->
-      <div class="audius-wrapper">
-        <div class="audius-player" id="music-player">
-          <span class="popup-title">HDBEENDOPE - Music Player</span>
-          <div class="close-bar">
-            <br />
-            <p id="now-playing">Now playing: <span id="trackDisplay"></span></p>
-            <div id="cover-art"></div>
+ <!--MUSIC PLAYER-->
+ <div class="audius-wrapper">
+  <div class="audius-player" id="music-player">
+    <span class="popup-title">HDBEENDOPE - Music Player</span>
+    <div class="close-bar">
+      <span class="close-x"
+        ><img src="images/close-x.png" style="margin-top: 2px"
+      /></span>
+    </div>
+    <br />
+    <div id="cover-art"></div>
+    <p id="now-playing">Now playing: <span id="trackDisplay"></span></p>
 
-            <!-- AUDIO CONTROLS -->
-            <audio controls id="music">
-              <source
-                src="https://discoveryprovider3.audius.co/v1/tracks/m7VmA/stream"
-                type="audio/mpeg"
-              />
-              Your browser does not support the audio element.
-            </audio>
+    <!-- AUDIO CONTROLS -->
+    <audio controls id="music">
+      <source src="" type="audio/mpeg" id="audioSrc" />
+      Your browser does not support the audio element.
+    </audio>
 
-            <button onclick="play()" type="button">
-              <i class="fa fa-play"></i>
-            </button>
-            <button onclick="pause()" type="button">
-              <i class="fa fa-pause"></i>
-            </button>
-            <button onclick="rewindAudio()" type="button">
-              <i class="fa fa-backward"></i>
-            </button>
-            <button onclick="fastForward()" type="button">
-              <i class="fa fa-forward"></i>
-            </button>
+    <button type="button" id="previous">
+      <i class="fa fa-step-backward"></i>
+    </button>
+    <button type="button" id="playpause">
+      <i class="fa fa-play"></i>
+    </button>
+    <button type="button" id="stop">
+      <i class="fa fa-stop"></i>
+    </button>
+    <button type="button" id="next">
+      <i class="fa fa-step-forward"></i>
+    </button>
+    <script>
+      var myMusic = document.getElementById("music");
+      function play() {
+        myMusic.play();
+      }
 
-            <script>
-              var myMusic = document.getElementById("music");
-              function play() {
-                myMusic.play();
-              }
+      function pause() {
+        myMusic.pause();
+      }
+    </script>
+  </div>
+</div>
+</div>
 
-              function pause() {
-                myMusic.pause();
-              }
-            </script>
-          </div>
-        </div>
-      </div>
+<!-- END MUSIC PLAYER-->
 
-      <!-- END MUSIC PLAYER-->
 
       <!-- EVERYTHING ELSE -->
 
@@ -125,27 +128,22 @@
             <img src="images/arthur_icon.png" class="menu-icon" />Start
           </div></a
         >
-        <a href=""
+        <a href="https://twitter.com/HDBeenDope"
           ><div id="socials">
             <img src="images/twitter.png" class="menu-icon" />Twitter
           </div></a
         >
-        <a href=""
+        <a href="https://www.instagram.com/hdbeendope/"
           ><div id="socials">
             <img src="images/ig.png" class="menu-icon" />Instagram
           </div></a
         >
-
-        <a href=""
-          ><div id="section-indicator">
-            <img src="images/docs_small.png" class="menu-icon" />My Documents
-          </div></a
-        >
-
         <div id="time">5:12 PM</div>
       </div>
     </div>
 
-    <script src="js/main.js" async defer></script>
-  </body>
+    <script src="js/music-player.js" async defer></script>
+    <script src="js/clock.js" async defer></script>
+  </div>
+ </body>
 </html>

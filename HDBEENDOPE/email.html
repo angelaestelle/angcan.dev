@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
-  <body>
+  <body>    <div class="bg">
+
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -22,52 +23,53 @@
 
     <!--CONTENT WRAPPER START-->
     <div class="content">
-            <!--MUSIC PLAYER-->
-            <div class="audius-wrapper">
-              <div class="audius-player" id="music-player">
-                <span class="popup-title">HDBEENDOPE - Music Player</span>
-                <div class="close-bar">
-                  <br>
-                <p id="now-playing">Now playing: <span id="trackDisplay"></span></p>
-                <div id="cover-art"></div>
-      
-                <!-- AUDIO CONTROLS -->
-                <audio controls id="music">
-                  <source
-                    src="https://discoveryprovider3.audius.co/v1/tracks/m7VmA/stream"
-                    type="audio/mpeg"
-                  />
-                  Your browser does not support the audio element.
-                </audio>
-      
-                <button onclick="play()" type="button">
-                  <i class="fa fa-play"></i>
-                </button>
-                <button onclick="pause()" type="button">
-                  <i class="fa fa-pause"></i>
-                </button>
-                <button onclick="rewindAudio()" type="button">
-                  <i class="fa fa-backward"></i>
-                </button>
-                <button onclick="fastForward()" type="button">
-                  <i class="fa fa-forward"></i>
-                </button>
-      
-                <script>
-                  var myMusic = document.getElementById("music");
-                  function play() {
-                    myMusic.play();
-                  }
-      
-                  function pause() {
-                    myMusic.pause();
-                  }
-                </script>
-              </div>
+        <!--MUSIC PLAYER-->
+        <div class="audius-wrapper">
+          <div class="audius-player" id="music-player">
+            <span class="popup-title">HDBEENDOPE - Music Player</span>
+            <div class="close-bar">
+              <span class="close-x"
+                ><img src="images/close-x.png" style="margin-top: 2px"
+              /></span>
             </div>
+            <br />
+            <div id="cover-art"></div>
+            <p id="now-playing">Now playing: <span id="trackDisplay"></span></p>
+
+            <!-- AUDIO CONTROLS -->
+            <audio controls id="music">
+              <source src="" type="audio/mpeg" id="audioSrc" />
+              Your browser does not support the audio element.
+            </audio>
+
+            <button type="button" id="previous">
+              <i class="fa fa-step-backward"></i>
+            </button>
+            <button type="button" id="playpause">
+              <i class="fa fa-play"></i>
+            </button>
+            <button type="button" id="stop">
+              <i class="fa fa-stop"></i>
+            </button>
+            <button type="button" id="next">
+              <i class="fa fa-step-forward"></i>
+            </button>
+            <script>
+              var myMusic = document.getElementById("music");
+              function play() {
+                myMusic.play();
+              }
+
+              function pause() {
+                myMusic.pause();
+              }
+            </script>
           </div>
-      
-          <!-- END MUSIC PLAYER-->
+        </div>
+      </div>
+
+      <!-- END MUSIC PLAYER-->
+
           
         <!-- EVERYTHING ELSE -->
     
@@ -151,9 +153,9 @@
 
     <div class="full-row">
       <div class="footer">
-        <a href=""
+        <a href="index.html"
           ><div id="start">
-            <img src="images/arthur_icon.png" class="menu-icon" />Start
+            <img src="images/arthur_icon.png" class="menu-icon" />Home
           </div></a
         >
         <a href=""
@@ -178,5 +180,5 @@
     </div>
 
     <script src="js/main.js" async defer></script>
-  </body>
+  </div></body>
 </html>

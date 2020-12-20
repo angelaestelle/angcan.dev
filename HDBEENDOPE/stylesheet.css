@@ -4,7 +4,17 @@
 }
 
 body {
+  height: 100%;
   margin: 0;
+}
+
+.bg {
+  background-image: url("images/Desktop_wallpaper_HD.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: auto;
 }
 
 .content {
@@ -285,7 +295,6 @@ input {
   clear: both;
   min-width: 100%;
   height: 100%;
-  background-color: goldenrod;
 }
 
 #twitch-embed {
@@ -307,16 +316,20 @@ input {
   float: right;
   background-color: #ece9d8;
   width: 580px;
-  height: 500px;
-  right: 0;
-  bottom: 100px;
+  height: 520px;
+  right: 2%;
+  bottom: 200px;
   margin: 20px;
+  border: 2px solid #c4c4c4;
+  box-sizing: border-box;
 }
 
 #cover-art {
-  width: 200px;
-  height: 200px;
+  position: relative;
+  width: 20%;
+  height: auto;
   padding: 20px;
+  bottom: 20px;
 }
 
 .audio-btn {
@@ -328,8 +341,44 @@ input {
 
 #now-playing,
 #trackDisplay {
+  z-index: 999;
   color: #000;
   font-family: px sans, "Courier New", Courier, monospace;
+  padding-left: 20px;
+  top: 360px;
+}
+
+#tracklist {
+  position: relative;
+  bottom: 465px;
+  left: 400px;
+  background-color: white;
+  width: 165px;
+  height: 180px;
+}
+
+#music {
+  visibility: hidden;
+}
+
+.fa-step-backward,
+.fa-play,
+.fa-pause,
+.fa-stop,
+.fa-step-forward {
+  transform: scale(2);
+}
+
+#previous,
+#playpause,
+#stop,
+#next {
+  position: relative;
+  bottom: 120px;
+  right: 285px;
+  background: transparent;
+  border: none;
+  padding-right: 30px;
 }
 
 /*MEDIA QUERIES*/ /*MEDIA QUERIES*/ /*MEDIA QUERIES*/
@@ -479,6 +528,7 @@ input {
   /* POP-UP WINDOWS */
 
   .close-bar {
+    z-index: 90;
     height: 30px;
     max-width: 100%;
     background: linear-gradient(to right, #0a246a, #607fb4, #a4c8ef);
