@@ -13,6 +13,7 @@ new Twitch.Embed("twitch-embed", {
   channel: "lecheflana",
   allowfullscreen: true,
   autoplay: true,
+  collection: '843109682',
   layout: 'video-with-chat',
 });
 
