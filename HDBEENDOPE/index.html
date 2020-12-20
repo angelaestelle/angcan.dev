@@ -40,9 +40,20 @@
             <div id="cover-art"></div>
             <p id="now-playing">Now playing: <span id="trackDisplay"></span></p>
 
+<<<<<<< HEAD
             <!-- AUDIO CONTROLS -->
             <audio controls id="music">
               <source src="" type="audio/mpeg" id="audioSrc" />
+=======
+          <!-- AUDIO CONTROLS -->
+          <div>
+            <audio controls id="music">
+              <source
+                src=""
+                type="audio/mpeg"
+                id="audioSrc"
+              />
+>>>>>>> 1c866650858eafee1abdea122b5d1ce3b56c859a
               Your browser does not support the audio element.
             </audio>
 
@@ -58,6 +69,7 @@
             <button type="button" id="next">
               <i class="fa fa-step-forward"></i>
             </button>
+<<<<<<< HEAD
             <script>
               var myMusic = document.getElementById("music");
               function play() {
@@ -69,6 +81,19 @@
               }
             </script>
           </div>
+=======
+          </div>
+          <script>
+            var myMusic = document.getElementById("music");
+            function play() {
+              myMusic.play();
+            }
+
+            function pause() {
+              myMusic.pause();
+            }
+          </script>
+>>>>>>> 1c866650858eafee1abdea122b5d1ce3b56c859a
         </div>
       </div>
 
@@ -127,8 +152,14 @@
         </div>
       </div>
 
+<<<<<<< HEAD
       <script src="js/music-player.js" async defer></script>
       <script src="js/clock.js" async defer></script>
     </div>
+=======
+    <script src="js/music-player.js" async defer></script>
+    <script src="js/clock.js" async defer></script>
+
+>>>>>>> 1c866650858eafee1abdea122b5d1ce3b56c859a
   </body>
 </html>

@@ -4,7 +4,11 @@
 }
 
 body {
+<<<<<<< HEAD
   height: 100%;
+=======
+  background-image: url("images/Desktop_wallpaper_HD.png")
+>>>>>>> 1c866650858eafee1abdea122b5d1ce3b56c859a
   margin: 0;
 }
 
@@ -325,9 +329,14 @@ input {
 }
 
 #cover-art {
+<<<<<<< HEAD
   position: relative;
   width: 20%;
   height: auto;
+=======
+  /* width: 200px;
+  height: 200px; */
+>>>>>>> 1c866650858eafee1abdea122b5d1ce3b56c859a
   padding: 20px;
   bottom: 20px;
 }
