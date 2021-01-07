@@ -13,8 +13,11 @@ const previousButton = document.getElementById('previous')
 const ppButton = document.getElementById('playpause')
 const stopButton = document.getElementById('stop')
 
+const playlistContent = document.getElementById('playlist')
+
 let playList = [];
 let index = 0;
+
 /* 
 AUDIUS API AUDIUS API AUDIUS API AUDIUS API AUDIUS API
 AUDIUS API AUDIUS API AUDIUS API AUDIUS API AUDIUS API
@@ -31,7 +34,6 @@ const onNextButton = (evt) => {
     ++index;
     audio.pause()
     setAudioTrack(playList[index]);
-    audio.load()
   } catch (e) {
     console.error(e)
   }
@@ -45,7 +47,6 @@ const onPreviousButton = (evt) => {
     }
     audio.pause()
     setAudioTrack(playList[--index])
-    audio.load()
   } catch (e) {
     console.error(e)
   }
@@ -89,10 +90,24 @@ const setAudioTrack = (trackInfo) => {
   artwork.innerHTML = `<img src=${track.artwork['1000x1000']}/>`;
   audioSrc.src = `https://discoveryprovider2.audius.co/v1/tracks/${track.id}/stream`;
   audio.load();
+  audio.play()
+  playButton.className = 'fa fa-pause'
+}
+
+const setPlayList = (playlist) => {
+  playList.forEach((track) => {
+    const trackNode = document.createElement('div')
+    trackNode.append(`${track.title} - ${track.user.name}`)
+    trackNode.addEventListener('click', onPlayListTrackClick(track))
+    playlistContent.appendChild(trackNode)
+  })
+}
+
+const onPlayListTrackClick = (track) => (_) => {
+  setAudioTrack(track)
 }
 
 async function init() {
-
   const getPlaylist = async () => {
     const response = await fetch('https://discoveryprovider2.audius.co/v1/playlists/LKpaY/tracks', {
       method: 'GET',
@@ -101,6 +116,7 @@ async function init() {
     return data;
   }
   playList = await getPlaylist()
+  setPlayList(playList)
   setAudioTrack(playList[0])
 }
 
