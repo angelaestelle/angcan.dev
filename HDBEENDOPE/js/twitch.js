@@ -5,19 +5,19 @@
 //Create a Twitch.Embed object that 
 //will render within the "twitch-embed" root element.
 
-const embed = document.getElementById('twitch-embed')
 
-new Twitch.Embed("twitch-embed", {
+const options = {
   width: 854,
   height: 480,
-  channel: "lecheflana",
-  allowfullscreen: true,
-  autoplay: true,
-  collection: '843109682',
-  layout: 'video-with-chat',
-});
+  channel: "lecheflana"
+  // you ned to add a video id or a collection id i think
+  // https://dev.twitch.tv/docs/embed/video-and-clips#interactive-frames-for-live-streams-and-vods
+}
+
+const embed = new Twitch.Player("twitch-embed", options);
 
 embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-  var player = embed.getPlayer();
+  console.log('The video is ready');
+  const player = embed.getPlayer();
   player.play();
 });
