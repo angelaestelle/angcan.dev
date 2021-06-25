@@ -1,6 +1,11 @@
 /*
-ANIMATONS
+FONT FACE
 */
+
+@font-face {
+  font-family: Moderat;
+  src: url(../fonts/Moderat-Regular.ttf);
+}
 
 html,
 body {
@@ -33,17 +38,17 @@ body {
 }
 
 h1 {
-  font-family: "Archivo Black", sans-serif;
-  color: #000;
+  font-family: "Moderat", sans-serif;
+  color: #ff34d8;
 }
 
 h2 {
-  font-family: "Archivo Black", sans-serif;
-  color: #08ddd8;
+  font-family: "Moderat", sans-serif;
+  color: #000;
 }
 
 p {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Moderat", monospace;
 }
 
 .date {
@@ -64,5 +69,5 @@ a:hover {
 ul,
 ol,
 li {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Moderat", monospace;
 }
