@@ -53,11 +53,12 @@ li {
 }
 
 .wrapper {
-  margin: auto;
+  margin: 0 auto;
   max-width: 1280px; /* 2 */
   padding-right: 10px; /* 3 */
   padding-left: 10px; /* 3 */
   border: solid 2px red;
+  overflow: auto;
 }
 
 h1 {
@@ -72,7 +73,6 @@ h2 {
 
 p {
   font-family: "FFDIN", monospace;
-  width: 800px;
 }
 
 .date {
@@ -123,31 +123,52 @@ button:hover {
 
 #popup {
   display: none;
-  position: relative;
   margin: 0 auto;
-  max-width: 960px; /* 2 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  max-width: 100%; /* 2 */
   max-height: 100%;
   background: none;
-  top: -2000px;
+  margin-top: 5%;
+}
+
+#popup:before {
+  vertical-align: middle;
 }
 
 .container {
   margin: auto;
-  max-width: 100%;
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
 }
 
 .close-x {
+  display: inline-block;
   position: relative;
-  z-index: 2;
-  top: 80px;
-  font-family: "FFDIN", monospace;
-  font-size: 3em;
-  padding: 40px;
+  min-height: 5px;
+  max-height: 40px;
+  width: auto;
+  padding: 20px;
+}
+
+.close-x:hover img {
+  fill: white;
 }
 
 .style-quiz {
   border: solid 8px black;
+  margin: 0 auto;
   top: 0;
+  left: 0;
   position: relative;
   max-width: 100%;
   height: auto;

@@ -33,7 +33,6 @@
             </h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non arcu magna. Donec vel magna pretium, euismod libero nec, ornare mauris. Maecenas sit amet fermentum lacus. Proin ornare efficitur justo placerat tincidunt. Praesent molestie nisl augue, a viverra libero sagittis a. Nulla ultricies erat neque, sodales dictum lorem ornare eu. Donec accumsan, turpis ac lacinia elementum, nunc sapien egestas nunc, vitae ornare elit erat et sapien. Mauris rhoncus, erat mollis malesuada accumsan, ligula est hendrerit mauris, quis ultrices felis libero non eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque faucibus sed orci et suscipit.
-
             </p>
 <button onclick="toggleQuiz()">Take the quiz</button>
 <button>Shop puma</button>
@@ -44,8 +43,11 @@
 </div></a>
 
 <div id="popup">
-    <span class="close-x">X</span>
+
     <div class="container">
+        <span onclick="toggleQuiz()" class="close-button">
+            <img src="assets/stylequiz-close.svg" class="close-x">
+        </span>
         <img src="assets/bts-stylequiz.png" class="style-quiz">
     </div> 
 </div>
