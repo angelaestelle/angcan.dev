@@ -20,11 +20,11 @@ body {
 
 body {
   max-width: 100%;
-  background: #fff9e2;
+  background: #ffffff;
 }
 
 nav {
-  background: #4075ff;
+  background: #000;
   max-width: 100%;
   height: 50px;
   padding: 10px 20px 0px 20px;
@@ -57,13 +57,41 @@ li {
   max-width: 1280px; /* 2 */
   padding-right: 10px; /* 3 */
   padding-left: 10px; /* 3 */
-  border: solid 2px red;
+  border: solid 2px white;
   overflow: auto;
+}
+
+.text-container {
+  margin-left: 50px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+  border: solid 1px white;
+}
+
+table,
+tr,
+td {
+  border: solid 1px white;
+  position: relative;
+}
+
+th {
+  text-align: left;
+}
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 h1 {
   font-family: "DIN", sans-serif;
   color: #000;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 0.05em;
 }
 
 h2 {
@@ -97,13 +125,17 @@ li {
 }
 
 .test-img {
-  margin: auto;
-  max-width: 100%;
-  height: auto;
+  position: relative;
+  filter: grayscale();
+  float: right;
+  width: auto;
+  height: 500px;
 }
 
 button {
   display: inline-block;
+  position: relative;
+  bottom: 0;
   padding: 10px;
   border: solid 4px black;
   background: #fff;
@@ -133,6 +165,7 @@ button:hover {
   max-height: 100%;
   background: none;
   margin-top: 5%;
+  border: solid 8px black;
 }
 
 #popup:before {
@@ -140,7 +173,16 @@ button:hover {
 }
 
 .container {
-  margin: auto;
+  overflow: auto;
+  height: 700px;
+  background-color: white;
+  position: relative;
+}
+
+.container > .style-quiz {
+  height: auto;
+  width: 200%;
+  vertical-align: bottom;
 }
 
 .close-button {
@@ -165,12 +207,9 @@ button:hover {
 }
 
 .style-quiz {
-  border: solid 8px black;
   margin: 0 auto;
   top: 0;
   left: 0;
   position: relative;
-  max-width: 100%;
   height: auto;
-  object-fit: contain;
 }
